@@ -26,14 +26,21 @@ public class MybooksApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Categoria cat1 = new Categoria(null, "Informatica", "Livros de Tecnologia");
 		
+		Categoria cat1 = new Categoria(null, "Informatica", "Tecnologia da Informação");
+		Categoria cat2 = new Categoria(null, "Ficção Científica", "Ciência e Tecnologia");
+		Categoria cat3 = new Categoria(null, "Biografia", "Personalidades do mundo");
+				
 		Livro l1 = new Livro(null, "Clean Code", "Robert Martin", "Loren ipsum", cat1);
-		
-		cat1.getLivros().addAll(Arrays.asList(l1));
-		
-		this.categoriaRepository.saveAll(Arrays.asList(cat1));
-		this.livroRepository.saveAll(Arrays.asList(l1));
+		Livro l2 = new Livro(null, "Engenharia de Software", "Louis V. Gerstner", "Loren ipsum", cat1);
+		Livro l3 = new Livro(null, "The Time Machine", "H. G. Wells", "Loren ipsum", cat2);
+		Livro l4 = new Livro(null, "I Robot", "Isaac Asimov", "Loren ipsum", cat2);
+				
+		cat1.getLivros().addAll(Arrays.asList(l1, l2));
+		cat1.getLivros().addAll(Arrays.asList(l3, l4));
+				
+		categoriaRepository.saveAll(Arrays.asList(cat1, cat2, cat3));
+		livroRepository.saveAll(Arrays.asList(l1, l2, l3, l4));
 		
 	}
 

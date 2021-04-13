@@ -22,7 +22,7 @@ public class DBService {
 		
 		Categoria cat1 = new Categoria(null, "Informatica", "Tecnologia da Informação");
 		Categoria cat2 = new Categoria(null, "Ficção Científica", "Ciência e Tecnologia");
-		Categoria cat3 = new Categoria(null, "Biografia", "Personalidades do mundo");
+		Categoria cat3 = new Categoria(null, "Biografias", "Personalidades do mundo");
 				
 		Livro l1 = new Livro(null, "Clean Code", "Robert Martin", "Loren ipsum", cat1);
 		Livro l2 = new Livro(null, "Engenharia de Software", "Louis V. Gerstner", "Loren ipsum", cat1);
